@@ -1,0 +1,21 @@
+- stat:
+    path: ~/.zsh
+  register: zshdir
+  tags:
+    - zsh
+
+- name: create .zsh directory
+  file:
+    name: ~/.zsh
+    state: directory
+  when: not zshdir.stat.exists
+  tags:
+    - zsh
+
+- name: Setup zshrc
+  template:
+    src: zshrc.j2
+    dest: ~/.zshrc
+    force: True
+  tags:
+    - zsh

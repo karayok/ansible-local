@@ -1,0 +1,15 @@
+- name: Setup gitconfig
+  template:
+    src: gitconfig.j2
+    dest: ~/.gitconfig
+    force: True
+  tags:
+    - git
+
+- name: Setup gitglobal ignore
+  template:
+    src: gitignore.j2
+    dest: ~/.gitignore_global
+    force: True
+  tags:
+    - git

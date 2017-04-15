@@ -1,0 +1,10 @@
+atom_packages_packages:
+  - atom-typescript
+  - browser-plus
+  - editorconfig
+  - file-icons
+  - linter
+  - linter-tslint
+  - script
+  - terminal-plus
+  - vim-mode-plus

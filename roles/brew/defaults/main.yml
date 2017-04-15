@@ -1,0 +1,21 @@
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/php
+
+homebrew_packages:
+  - ansible
+  - composer
+  - coreutils
+  - composer
+  - fontconfig
+  - git
+  - nkf
+  - node
+  - npm
+  - php70
+  - phpunit
+  - python
+  - vim
+  - yarn
+  - zsh
+  - zsh-completions

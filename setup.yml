@@ -1,0 +1,26 @@
+- name: Setup private local environment
+  hosts: private
+  connection: local
+  gather_facts: no
+  roles:
+    # Application install
+    - brew
+    - brew-cask
+    # settings
+    - ssh
+    - git
+    - vim
+    - zsh
+- name: Setup Excite local environment
+  hosts: excite
+  connection: local
+  gather_facts: no
+  roles:
+    # Application install
+    - brew
+    - brew-cask
+    # settings
+    - ssh
+    - git
+    - vim
+    - zsh
