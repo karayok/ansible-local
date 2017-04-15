@@ -18,15 +18,12 @@ $ vi ansible-local/group_vars/[private|business].yml
 ```
 
 If you want to use multiple github accounts, edit https://github.com/KarageAgeta/ansible-local/roles/ssh/templates/ssh_config.j2
+
 See : http://karage-ageta.hatenablog.com/entry/2016/10/11/191811
 
 ## Ansible playbook
 ```
-# For private PC
-$ ansible-playbook setup.yml -i local -l private
-
-# For business PC
-$ ansible-playbook setup.yml -i local -l private
+$ ansible-playbook setup.yml -i local -l [private|business]
 ```
 
 ## Setup vim
