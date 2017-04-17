@@ -14,8 +14,9 @@ homebrew_packages:
   - npm
   - php70
   - phpunit
-  - python
+  - python3
   - vim
-  - yarn
+#  brew link node is needed
+#  - yarn
   - zsh
   - zsh-completions

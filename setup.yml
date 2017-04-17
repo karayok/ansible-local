@@ -1,4 +1,4 @@
-- name: Setup private local environment
+- name: Setup private PC environment
   hosts: private
   connection: local
   gather_facts: no
@@ -11,8 +11,8 @@
     - git
     - vim
     - zsh
-- name: Setup Excite local environment
-  hosts: excite
+- name: Setup company PC environment
+  hosts: business
   connection: local
   gather_facts: no
   roles:

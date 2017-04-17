@@ -85,6 +85,11 @@ alias gps='git push'
 
 alias grst='git reset'
 
+
+# ---------- npm ----------
+alias npm-remove='npm ls -gp --depth=0 | awk -F/ \''/node_modules/ && !/\/npm$/ {print $NF}\'' | xargs npm -g rm'
+alias sudo-npm-remove='sudo npm ls -gp --depth=0 | awk -F/ \''/node_modules/ && !/\/npm$/ {print $NF}\'' | sudo xargs npm -g rm'
+
 # -------------------------------------------------
 
 # ---------- auto-comp ---------
