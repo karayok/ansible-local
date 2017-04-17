@@ -11,7 +11,7 @@
     - git
     - vim
     - zsh
-- name: Setup company PC environment for
+- name: Setup company PC environment
   hosts: business
   connection: local
   gather_facts: no
