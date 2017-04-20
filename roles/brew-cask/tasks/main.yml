@@ -7,7 +7,7 @@
   tags:
       - brew-cask
 
-- name: Add additional homebrew taps
+- name: Add additional homebrew cask packages
   homebrew_tap:
     tap: "{{ item }}"
     state: present
