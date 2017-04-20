@@ -2,6 +2,6 @@
 git_email: "mymail@mail.com"
 git_name: "My Name"
 
-homebrew_cask_packages:
+additional_homebrew_cask_packages:
   - mysqlworkbench
   - sshfs
