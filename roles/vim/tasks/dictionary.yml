@@ -1,0 +1,22 @@
+- stat:
+    path: ~/.vim/dict/
+  register: dictdir
+  tags:
+    - vim
+
+- name: Create dictionary directory
+  file:
+    name: ~/.vim/dict/
+    state: directory
+    recurse: yes
+  when: not dictdir.stat.exists
+  tags:
+    - vim
+
+# TODO : fix
+- name: Create PHP dictionary
+  shell:  php dict.php | sort > ~/.vim/dict/php.dict
+  args: 
+    creates: ~/.vim/dict/php.dict
+  tags:
+    - vim

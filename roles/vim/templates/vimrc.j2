@@ -78,17 +78,20 @@ set autoindent smartindent cindent
 set tabstop=4 shiftwidth=4 softtabstop=0
 set expandtab
 if has("autocmd")
-    "ファイルタイプの検索を有効にする
     filetype plugin on
-    "そのファイルタイプにあわせたインデントを利用する
     filetype indent on
-    " これらのftではインデントを無効に
-    "autocmd FileType php filetype indent off
-
+    " yml
     autocmd FileType yml :set tabstop=2 shiftwidth=2 softtabstop=0
+    " html/xhtml
     autocmd FileType html :set tabstop=2 shiftwidth=2 softtabstop=0
     autocmd FileType xhtml :set tabstop=2 shiftwidth=2 softtabstop=0
-    autocmd Filetype python :set tabstop=4 shiftwidth=4 softtabstop=0
+    " PHP
+    autocmd FileType php setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+    " Python
+    autocmd FileType python setl autoindent
+    autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+    autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 endif
 
 "-------------------------------------------------------------------------------
@@ -174,7 +177,6 @@ let g:neocomplcache_enable_skip_completion = 1
 let g:neocomplcache_skip_input_time = '0.5'
 let g:neocomplete#sources#dictionary#dictionaries = {
   \ 'default':    '',
-  \ 'javascript': '~/.vim/.vim/dict/javascript.dict',
-  \ 'php':        '~/.vim/.vim/dict/php.dict',
+  \ 'php':        '~/.vim/dict/php.dict',
   \ }
 call neobundle#end()

@@ -1,0 +1,30 @@
+- stat:
+    path: ~/.vim/bundle
+  register: vimdir
+  tags:
+    - vim
+
+- name: create .vim directory
+  file:
+    name: ~/.vim/bundle
+    state: directory
+    recurse: yes
+  when: not vimdir.stat.exists
+  tags:
+    - vim
+
+- name: clone NeoBundle
+  git:
+    repo: git://github.com/Shougo/neobundle.vim
+    dest: ~/.vim/bundle/neobundle.vim
+    clone: yes
+  tags:
+    - vim
+
+- name: Setup vimrc
+  template:
+    src: vimrc.j2
+    dest: ~/.vimrc
+    force: True
+  tags:
+    - vim
