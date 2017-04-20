@@ -17,7 +17,8 @@ $ sudo xcodebuild -license
 $ vi ansible-local/group_vars/[private|business].yml
 ```
 
-If you want to use multiple github accounts, edit https://github.com/KarageAgeta/ansible-local/roles/ssh/templates/ssh_config.j2
+If you want to use multiple github accounts, edit [roles/ssh/templates/ssh_config.j2](https://github.com/KarageAgeta/ansible-local/roles/ssh/templates/ssh_config.j2
+)
 
 See : http://karage-ageta.hatenablog.com/entry/2016/10/11/191811
 
