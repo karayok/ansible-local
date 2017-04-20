@@ -8,9 +8,10 @@
     - brew-cask
     # settings
     - ssh
+    - zsh
     - git
     - vim
-    - zsh
+    - atom
 - name: Setup company PC environment
   hosts: business
   connection: local
@@ -21,6 +22,7 @@
     - brew-cask
     # settings
     - ssh
+    - zsh
     - git
     - vim
-    - zsh
+    - atom

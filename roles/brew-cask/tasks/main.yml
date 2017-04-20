@@ -6,3 +6,13 @@
     - "{{ homebrew_cask_packages }}"
   tags:
       - brew-cask
+
+- name: Add additional homebrew cask packages
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ additional_homebrew_cask_packages }}"
+  when: additional_homebrew_cask_packages is defined
+  tags:
+    - brew-cask

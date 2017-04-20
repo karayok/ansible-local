@@ -2,22 +2,6 @@
 git_email: "mymail@mail.com"
 git_name: "My Name"
 
-homebrew_cask_packages:
-  - android-studio
-  - appcleaner
-  - atom
-  - clipy
-  - evernote
-  - google-chrome
-  - google-japanese-ime
-  - iterm2
-  - java }
-  - karabiner
-  - magican
+additional_homebrew_cask_packages:
   - mysqlworkbench
-  - phpstorm
-  - sequel-pro
-  - slack
   - sshfs
-  - vagrant
-  - virtualbox
