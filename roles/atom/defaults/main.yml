@@ -1,6 +1,5 @@
 atom_packages_packages:
   - atom-typescript
-  - browser-plus
   - editorconfig
   - file-icons
   - linter

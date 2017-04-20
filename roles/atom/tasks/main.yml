@@ -1,6 +1,5 @@
 - name: Add atom packages
-  atom_packages:
-    atom_upgrade_all: True
+  shell: "apm install {{ item }}"
   with_items:
     - "{{ atom_packages_packages }}"
   tags:

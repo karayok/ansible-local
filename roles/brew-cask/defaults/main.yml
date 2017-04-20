@@ -1,0 +1,15 @@
+homebrew_cask_packages:
+  - android-studio
+  - appcleaner
+  - atom
+  - clipy
+  - evernote
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - java
+  - karabiner
+  - magican
+  - phpstorm
+  - sequel-pro
+  - slack
