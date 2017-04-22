@@ -8,8 +8,8 @@
       - brew-cask
 
 - name: Add additional homebrew cask packages
-  homebrew_tap:
-    tap: "{{ item }}"
+  homebrew_cask:
+    name: "{{ item }}"
     state: present
   with_items:
     - "{{ additional_homebrew_cask_packages }}"
