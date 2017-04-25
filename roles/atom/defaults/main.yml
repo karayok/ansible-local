@@ -1,9 +1,12 @@
-atom_packages_packages:
+atom_packages:
   - atom-typescript
+  - autocomplete-python
   - editorconfig
   - file-icons
   - linter
   - linter-tslint
+  - python-tools
+  - regex-railroad-diagram
   - script
   - terminal-plus
   - vim-mode-plus
