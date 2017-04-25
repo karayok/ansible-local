@@ -1,6 +1,6 @@
 - name: Add atom packages
   shell: "apm install {{ item }}"
   with_items:
-    - "{{ atom_packages_packages }}"
+    - "{{ atom_packages }}"
   tags:
     - atom

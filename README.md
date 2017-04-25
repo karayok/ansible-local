@@ -27,5 +27,10 @@ See : http://karage-ageta.hatenablog.com/entry/2016/10/11/191811
 $ ansible-playbook setup.yml -i local -l [private|business]
 ```
 
+Run specific roles (use tags)
+```
+$ ansible-playbook setup.yml -i local -l [private|business] -tags <name of tags e.g. brew>
+```
+
 ## Setup vim
 Do ` :NeoBundleInstall ` after starting vim.
