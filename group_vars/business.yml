@@ -4,4 +4,3 @@ git_name: "My Name"
 
 additional_homebrew_cask_packages:
   - mysqlworkbench
-  - sshfs
