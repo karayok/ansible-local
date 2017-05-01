@@ -12,4 +12,5 @@ homebrew_cask_packages:
   - magican
   - phpstorm
   - sequel-pro
+  - skitch
   - slack
