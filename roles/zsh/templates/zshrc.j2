@@ -3,7 +3,7 @@
 export PATH=$PATH:~/Library/Android/sdk/platform-tools
 
 # Homebrew オプション
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS='--appdir=/Applications'
 
 # 日本語を使用
 export LANG=ja_JP.UTF-8
@@ -48,8 +48,8 @@ setopt share_history
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
+bindkey '^P' history-beginning-search-backward-end
+bindkey '^N' history-beginning-search-forward-end
 bindkey '^R' history-incremental-search-backward
 
 # -------------------------------------------------
@@ -120,30 +120,38 @@ zstyle ':completion:*:default' menu select=1
 
 # ---------- theme ---------
 # ---------- 文字色 ----------
-local COLOR_FG_LIGHTBLUE="%{[38;5;081m%}"
-local COLOR_FG_BLUE="%{[38;5;033m%}"
-local COLOR_FG_DEEPGREEN="%{[38;5;034m%}"
-local COLOR_FG_GREEN="%{[38;5;082m%}"
-local COLOR_FG_ORANGE="%{[38;5;214m%}"
-local COLOR_FG_PINK="%{[38;5;200m%}"
-local COLOR_FG_RED="%{[38;5;196m%}"
+local COLOR_FG_LIGHTBLUE='%{[38;5;081m%}'
+local COLOR_FG_BLUE='%{[38;5;033m%}'
+local COLOR_FG_DEEPGREEN='%{[38;5;034m%}'
+local COLOR_FG_GREEN='%{[38;5;082m%}'
+local COLOR_FG_ORANGE='%{[38;5;214m%}'
+local COLOR_FG_PINK='%{[38;5;200m%}'
+local COLOR_FG_RED='%{[38;5;196m%}'
 
 # ---------- 背景色 ----------
-local COLOR_BG_GREEN="%{[30;48;5;082m%}"
-local COLOR_END="%{[0m%}"
-
-GIT_PROMPT_DIRTY="${COLOR_FG_RED}✘✘✘"
-GIT_PROMPT_CLEAN="${COLOR_FG_GREEN}✔"
+local COLOR_BG_GREEN='%{[30;48;5;082m%}'
+local COLOR_END='%{[0m%}'
 
 function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
 }
 
+zstyle ':vcs_info:*' formats '%s : %r-[%b] - %m'
+zstyle ':vcs_info:*' actionformats '%s : %r-[%b|%a] - %m'
 precmd () {
     psvar=()
-    LANG=en_US.UTF-8 vcs_info
+    LANG=en_US.UTF-8
+    vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-PROMPT="╭─${COLOR_FG_GREEN}%n${COLOR_END} at ${COLOR_FG_ORANGE}$(box_name)${COLOR_END} in %B${COLOR_FG_PINK}%d${COLOR_END}%b using %1(v|${COLOR_FG_LIGHTBLUE}%1v${COLOR_END}|)
-╰─ "
+zstyle ':vcs_info:git+set-message:*' hooks git-config-user
+function +vi-git-config-user(){
+  user=`git config user.name`
+  email=`git config user.email`
+  hook_com[misc]+=$user($email)
+}
+
+PROMPT='╭─${COLOR_FG_GREEN}%n${COLOR_END} at ${COLOR_FG_ORANGE}$(box_name)${COLOR_END} in %B${COLOR_FG_PINK}%d${COLOR_END}%b
+| %1(v|${COLOR_FG_LIGHTBLUE}%1v${COLOR_END}|)
+╰─ '
