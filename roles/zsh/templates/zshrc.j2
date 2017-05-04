@@ -136,8 +136,8 @@ function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || echo ${SHORT_HOST:-$HOST}
 }
 
-zstyle ':vcs_info:*' formats '%s : %r-[%b] - %m'
-zstyle ':vcs_info:*' actionformats '%s : %r-[%b|%a] - %m'
+zstyle ':vcs_info:*' formats '%s : %r[%b] - %m'
+zstyle ':vcs_info:*' actionformats '%s : %r[%b|%a] - %m'
 precmd () {
     psvar=()
     LANG=en_US.UTF-8
