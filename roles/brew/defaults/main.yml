@@ -10,6 +10,7 @@ homebrew_packages:
   - composer
   - fontconfig
   - git
+  - iproute2mac
   - nkf
   - node
   - npm
