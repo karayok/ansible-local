@@ -2,6 +2,8 @@
 git_email: "mymail@mail.com"
 git_name: "My Name"
 
+additional_homebrew_packages:
+  - mysql
 additional_homebrew_cask_packages:
   - google-drive
   - vagrant

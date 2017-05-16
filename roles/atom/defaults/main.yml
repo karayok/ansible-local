@@ -1,10 +1,13 @@
 atom_packages:
   - atom-typescript
   - autocomplete-python
+  - busy-signal
   - editorconfig
   - file-icons
+  - intentions
   - linter
   - linter-tslint
+  - linter-ui-default
   - python-tools
   - regex-railroad-diagram
   - script
