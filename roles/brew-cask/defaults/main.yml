@@ -6,6 +6,7 @@ homebrew_cask_packages:
   - evernote
   - google-chrome
   - google-japanese-ime
+  - intellij-idea
   - iterm2
   - java
   - karabiner
