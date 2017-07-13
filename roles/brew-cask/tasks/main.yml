@@ -6,6 +6,7 @@
     - "{{ homebrew_cask_packages }}"
   tags:
       - brew-cask
+  ignore_errors: yes
 
 - name: Add additional homebrew cask packages
   homebrew_cask:
@@ -16,3 +17,4 @@
   when: additional_homebrew_cask_packages is defined
   tags:
     - brew-cask
+  ignore_errors: yes
