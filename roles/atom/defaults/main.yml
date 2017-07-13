@@ -1,11 +1,14 @@
 atom_packages:
+  - atom-ternjs
   - atom-typescript
+  - autocomplete-modules
   - autocomplete-python
   - busy-signal
   - editorconfig
   - file-icons
   - intentions
   - linter
+  - linter-eslint
   - linter-tslint
   - linter-ui-default
   - python-tools
