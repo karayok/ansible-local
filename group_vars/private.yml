@@ -4,6 +4,8 @@ git_name: "My Name"
 
 additional_homebrew_packages:
   - mysql
+  - git-lfs
+  - docker
 additional_homebrew_cask_packages:
   - google-drive
   - vagrant

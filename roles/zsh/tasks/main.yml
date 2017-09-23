@@ -2,7 +2,7 @@
     path: ~/.zsh
   register: zshdir
   tags:
-    - zsh
+   - zsh
 
 - name: create .zsh directory
   file:
@@ -10,12 +10,32 @@
     state: directory
   when: not zshdir.stat.exists
   tags:
+     - zsh
+
+- name: Setup zshenv
+  template:
+    src: zshenv.j2
+    dest: ~/.zshenv
+    force: True
+  tags:
     - zsh
 
 - name: Setup zshrc
   template:
     src: zshrc.j2
-    dest: ~/.zshrc
+    dest: "~/.zsh/.zshrc"
     force: True
+  tags:
+    - zsh
+
+- name: Setup extra zshrc files
+  template:
+    src: "zshrc_{{ item }}.j2"
+    dest: "~/.zsh/.zshrc_{{ item }}"
+    force: True
+  with_items:
+    - path
+    - theme
+    - alias
   tags:
     - zsh

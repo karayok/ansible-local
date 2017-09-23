@@ -37,7 +37,7 @@
     install_options: omit
     state: latest
   with_items:
-  - "{{ homebrew_packages }}"
+    - "{{ homebrew_packages }}"
   tags:
     - brew
 
@@ -47,7 +47,7 @@
     install_options: omit
     state: latest
   with_items:
-  - "{{ additional_homebrew_packages }}"
+    - "{{ additional_homebrew_packages }}"
   when: additional_homebrew_packages is defined
   tags:
     - brew
