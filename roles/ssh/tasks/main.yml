@@ -12,10 +12,27 @@
   tags:
      - ssh
 
+- stat:
+    path: "{{ private_settings_dir }}ssh_config.j2"
+  register: ssh_config
+  when: "private_settings_dir is defined"
+  tags:
+   - ssh
+
+- name: Setup .ssh/config from the file in local directory
+  template:
+    src: "{{ private_settings_dir }}ssh_config.j2"
+    dest: ~/.ssh/config
+    force: True
+  when: ["private_settings_dir is defined", "ssh_config.stat.exists"]
+  tags:
+     - ssh
+
 - name: Setup .ssh/config
   template:
     src: ssh_config.j2
     dest: ~/.ssh/config
     force: True
+  when: "private_settings_dir is not defined or not ssh_config is not defined or not ssh_config.stat.exists"
   tags:
     - ssh
