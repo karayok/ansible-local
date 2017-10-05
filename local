@@ -1,5 +1,8 @@
 [private]
 private
 
-[business]
-business
+[biz]
+biz
+
+[biz-linux]
+biz-linux

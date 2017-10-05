@@ -1,3 +1,17 @@
+- stat:
+    path: ~/.ssh
+  register: sshdir
+  tags:
+   - ssh
+
+- name: create .ssh directory
+  file:
+    name: ~/.ssh
+    state: directory
+  when: not sshdir.stat.exists
+  tags:
+     - ssh
+
 - name: Setup .ssh/config
   template:
     src: ssh_config.j2

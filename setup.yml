@@ -13,7 +13,7 @@
     - vim
     - atom
 - name: Setup company PC environment
-  hosts: business
+  hosts: biz
   connection: local
   gather_facts: no
   roles:
@@ -26,3 +26,13 @@
     - git
     - vim
     - atom
+- name: Setup company linux server environment
+  hosts: biz-linux
+  connection: local
+  gather_facts: no
+  roles:
+    # settings
+    - ssh
+    - zsh
+    - git
+    - vim

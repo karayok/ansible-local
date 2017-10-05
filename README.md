@@ -24,13 +24,13 @@ See : http://karage-ageta.hatenablog.com/entry/2016/10/11/191811
 
 ## Ansible playbook
 ```
-$ ansible-playbook setup.yml -i local -l [private|business]
+$ ansible-playbook setup.yml -i local -l [private|biz|biz-linux]
 ```
 
 Run specific roles (use tags)
 ```
-$ ansible-playbook setup.yml -i local -l [private|business] -tags <name of tags e.g. brew>
+$ ansible-playbook setup.yml -i local -l [private|biz|biz-linux] -tags <name of tags e.g. brew>
 ```
 
 ## Setup vim
-Do ` :NeoBundleInstall ` after starting vim.
+Do ` :NeoBundleInstall ` after starting vi.
