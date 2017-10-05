@@ -16,3 +16,4 @@ atom_packages:
   - script
   - terminal-plus
   - vim-mode-plus
+  - markdown-pdf

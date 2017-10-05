@@ -1,7 +1,7 @@
 homebrew_taps:
   - caskroom/cask
   - homebrew/php
-  - brona/iproute2mac
+  - caskroom/versions
 
 homebrew_packages:
   - ansible
@@ -10,7 +10,6 @@ homebrew_packages:
   - composer
   - fontconfig
   - git
-  - iproute2mac
   - nkf
   - node
   - npm

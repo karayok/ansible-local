@@ -1,9 +1,8 @@
 homebrew_cask_packages:
-  - android-studio
+  - android-studio-canary
   - appcleaner
   - atom
   - clipy
-  - evernote
   - google-chrome
   - google-japanese-ime
   - intellij-idea
