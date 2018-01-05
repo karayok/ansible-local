@@ -1,5 +1,6 @@
 alias la='ls -la'
 alias ls='ls -l'
+# @see : https://qiita.com/yone098@github/items/bba8a42de6b06e40983b
 alias lat='pwd;find . | sort | sed '\''1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'\'''
 
 alias rm='rm -i'
@@ -14,6 +15,8 @@ alias glog='git log --graph --date=short --decorate=short --pretty=format:'\''%C
 
 alias gb='git branch'
 alias gbd='git branch -d'
+# Delete all merged branches
+alias gdelb="git fetch --prune; git branch --merged | egrep -v '\\*|master' | xargs --no-run-if-empty git branch -d;"
 
 alias grp='git remote prune'
 
