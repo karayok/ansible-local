@@ -5,6 +5,10 @@ private_settings_dir: ~/private_settings/ssh/templates/
 git_email: "mymail@mail.com"
 git_name: "My Name"
 
+additional_homebrew_packages:
+  - mergepbx
+  - swiftlint
+
 additional_homebrew_cask_packages:
   - fastlane
   - mysqlworkbench

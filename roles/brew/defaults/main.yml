@@ -8,14 +8,17 @@ homebrew_packages:
   - composer
   - coreutils
   - composer
-  - fontconfig
   - git
+  - gradle
+  - highlight
   - nkf
   - node
   - npm
   - php70
   - phpunit
   - python3
+  - ruby
+  - rbenv
   - vim
 #  brew link node is needed
 #  - yarn
