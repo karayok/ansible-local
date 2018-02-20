@@ -5,12 +5,13 @@ homebrew_cask_packages:
   - clipy
   - google-chrome
   - google-japanese-ime
-  - intellij-idea
+  - intellij-idea-ce
   - iterm2
   - java
   - karabiner
   - magican
   - phpstorm
+  - pycharm-ce
   - sequel-pro
   - skitch
   - slack

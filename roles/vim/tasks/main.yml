@@ -1,2 +1,2 @@
-- include: dictionary.yml
-- include: install.yml
+- import_tasks: dictionary.yml
+- import_tasks: install.yml
