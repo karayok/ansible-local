@@ -5,12 +5,15 @@ homebrew_taps:
 
 homebrew_packages:
   - ansible
+  - cocoapods
   - composer
   - coreutils
   - composer
   - git
   - gradle
   - highlight
+  - ideviceinstaller
+  - ios-deploy
   - nkf
   - node
   - npm

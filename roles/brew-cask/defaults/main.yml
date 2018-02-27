@@ -8,7 +8,6 @@ homebrew_cask_packages:
   - intellij-idea-ce
   - iterm2
   - java
-  - karabiner
   - magican
   - phpstorm
   - pycharm-ce
