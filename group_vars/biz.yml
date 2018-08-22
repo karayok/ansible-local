@@ -10,5 +10,6 @@ additional_homebrew_packages:
   - swiftlint
 
 additional_homebrew_cask_packages:
+  - docker
   - fastlane
   - mysqlworkbench
