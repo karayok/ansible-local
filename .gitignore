@@ -29,3 +29,6 @@ Temporary Items
 
 # For Ansible playbook
 *.retry
+
+# IDEA
+.idea*

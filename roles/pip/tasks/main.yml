@@ -1,0 +1,9 @@
+- name: Install python packages globally
+  pip:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ pip_packages }}"
+  when: pip_packages is defined
+  tags:
+    - pip

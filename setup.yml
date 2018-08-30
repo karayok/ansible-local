@@ -11,7 +11,7 @@
     - zsh
     - git
     - vim
-    - atom
+    - pip
 - name: Setup company PC environment
   hosts: biz
   connection: local
@@ -26,6 +26,7 @@
     - git
     - vim
     - atom
+    - pip
 - name: Setup company linux server environment
   hosts: biz-linux
   connection: local

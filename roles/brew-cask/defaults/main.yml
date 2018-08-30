@@ -14,3 +14,4 @@ homebrew_cask_packages:
   - slack
   - sourcetree
   - vagrant
+  - virtualbox
