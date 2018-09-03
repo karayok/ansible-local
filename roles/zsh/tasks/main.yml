@@ -2,15 +2,16 @@
     path: ~/.zsh
   register: zshdir
   tags:
-   - zsh
+    - zsh
 
 - name: create .zsh directory
   file:
     name: ~/.zsh
     state: directory
-  when: not zshdir.stat.exists
+  when:
+    - not zshdir.stat.exists
   tags:
-     - zsh
+    - zsh
 
 - name: Setup zshenv
   template:

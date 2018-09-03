@@ -9,7 +9,8 @@
     name: ~/.vim/bundle
     state: directory
     recurse: yes
-  when: not vimdir.stat.exists
+  when:
+    - not vimdir.stat.exists
   tags:
     - vim
 

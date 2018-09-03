@@ -2,37 +2,42 @@
     path: ~/.ssh
   register: sshdir
   tags:
-   - ssh
+    - ssh
 
 - name: create .ssh directory
   file:
     name: ~/.ssh
     state: directory
-  when: not sshdir.stat.exists
+  when:
+    - not sshdir.stat.exists
   tags:
-     - ssh
+    - ssh
 
 - stat:
     path: "{{ private_settings_dir }}ssh_config.j2"
   register: ssh_config
-  when: "private_settings_dir is defined"
+  when:
+    - private_settings_dir is defined
   tags:
-   - ssh
+    - ssh
 
 - name: Setup .ssh/config from the file in local directory
   template:
     src: "{{ private_settings_dir }}ssh_config.j2"
     dest: ~/.ssh/config
     force: True
-  when: ["private_settings_dir is defined", "ssh_config.stat.exists"]
+  when:
+    - private_settings_dir is defined
+    - ssh_config.stat.exists
   tags:
-     - ssh
+    - ssh
 
 - name: Setup .ssh/config
   template:
     src: ssh_config.j2
     dest: ~/.ssh/config
     force: True
-  when: "private_settings_dir is not defined or not ssh_config is not defined or not ssh_config.stat.exists"
+  when:
+    - private_settings_dir is not defined or not ssh_config is not defined or not ssh_config.stat.exists
   tags:
     - ssh

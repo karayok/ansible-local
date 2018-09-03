@@ -12,7 +12,8 @@
     state: present
   with_items:
     - "{{ homebrew_taps }}"
-  when: homebrew_taps is defined
+  when:
+    - homebrew_taps is defined
   tags:
     - brew
 
@@ -22,7 +23,8 @@
     state: present
   with_items:
     - "{{ additional_homebrew_taps }}"
-  when: additional_homebrew_taps is defined
+  when:
+    - additional_homebrew_taps is defined
   tags:
     - brew
 
@@ -39,7 +41,8 @@
     state: latest
   with_items:
     - "{{ homebrew_packages }}"
-  when: homebrew_packages is defined
+  when:
+    - homebrew_packages is defined
   tags:
     - brew
 
@@ -50,6 +53,7 @@
     state: latest
   with_items:
     - "{{ additional_homebrew_packages }}"
-  when: additional_homebrew_packages is defined
+  when:
+    - additional_homebrew_packages is defined
   tags:
     - brew
