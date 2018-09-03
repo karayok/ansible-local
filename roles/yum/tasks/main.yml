@@ -1,0 +1,11 @@
+- name: Install yum packages
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ yum_packages }}"
+  when:
+    - yum_packages is defined
+    - install_yum_packages
+  tags:
+    - yum

@@ -33,6 +33,7 @@
   gather_facts: no
   roles:
     # settings
+    - yum
     - ssh
     - zsh
     - git
