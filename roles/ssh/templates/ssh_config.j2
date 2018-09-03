@@ -1,14 +1,9 @@
-Host github.com
-  HostName github.com
-  User git
-  Port 22
-  IdentityFile ~/.ssh/id_rsa_github
-  TCPKeepAlive yes
-  IdentitiesOnly yes
-Host sub.github.com
-  HostName sub.github.com
-  User git
-  Port 22
-  IdentityFile ~/.ssh/id_rsa_sub
-  TCPKeepAlive yes
-  IdentitiesOnly yes
+{% for item in ssh_config_values %}
+Host {{ item.host }}
+  HostName {{ item.host_name }}
+  User {{ item.user }}
+  Port {{ item.port }}
+  IdentityFile {{ item.identity_file }}
+  TCPKeepAlive {{ item.keep_alive }}
+  IdentitiesOnly {{ item.identities_only }}
+{% endfor %}

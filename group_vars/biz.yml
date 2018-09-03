@@ -12,3 +12,19 @@ additional_homebrew_packages:
 additional_homebrew_cask_packages:
   - fastlane
   - mysqlworkbench
+
+ssh_config_values:
+  - host: "github.com"
+    host_name: "github.com"
+    user: "git"
+    port: 22
+    identity_file: "~/.ssh/id_rsa_github"
+    keep_alive: "yes"
+    identities_only: "yes"
+  # - host: "sub.github.com"
+  #   host_name: "sub.github.com"
+  #   user: "git"
+  #   port: 22
+  #   identity_file: "~/.ssh/id_rsa_github_sub"
+  #   keep_alive: "yes"
+  #   identities_only: "yes"
