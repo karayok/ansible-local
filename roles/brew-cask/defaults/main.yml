@@ -1,8 +1,10 @@
 homebrew_cask_packages:
+  - android-studio
   - android-studio-canary
   - appcleaner
   - atom
   - clipy
+  - docker
   - google-chrome
   - google-japanese-ime
   - iterm2

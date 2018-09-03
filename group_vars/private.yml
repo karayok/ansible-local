@@ -9,7 +9,7 @@ additional_homebrew_packages:
   - mysql
   - git-lfs
   - dex2jar
-  - docker
+
 additional_homebrew_cask_packages:
   - jd-gui
   - google-drive
