@@ -1,19 +1,15 @@
 - name: Install homebrew cask packages
   homebrew_cask:
-    name: "{{ item }}"
+    name: "{{ homebrew_cask_packages }}"
     state: present
-  with_items:
-    - "{{ homebrew_cask_packages }}"
   tags:
     - brew-cask
   ignore_errors: yes
 
 - name: Add additional homebrew cask packages
   homebrew_cask:
-    name: "{{ item }}"
+    name: "{{ additional_homebrew_cask_packages }}"
     state: present
-  with_items:
-    - "{{ additional_homebrew_cask_packages }}"
   when:
     - additional_homebrew_cask_packages is defined
   tags:

@@ -36,11 +36,9 @@
 
 - name: Install homebrew packages
   homebrew:
-    name: "{{ item }}"
+    name: "{{ homebrew_packages }}"
     install_options: omit
     state: latest
-  with_items:
-    - "{{ homebrew_packages }}"
   when:
     - homebrew_packages is defined
   tags:
@@ -48,11 +46,9 @@
 
 - name: Install additional homebrew packages
   homebrew:
-    name: "{{ item }}"
+    name: "{{ additional_homebrew_packages }}"
     install_options: omit
     state: latest
-  with_items:
-    - "{{ additional_homebrew_packages }}"
   when:
     - additional_homebrew_packages is defined
   tags:

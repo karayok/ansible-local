@@ -12,9 +12,8 @@ additional_homebrew_packages:
 
 additional_homebrew_cask_packages:
   - jd-gui
-  - google-drive
+  - google-backup-and-sync
   - vagrant
-  - virtualbox
 
 ssh_config_values:
   - host: "github.com"

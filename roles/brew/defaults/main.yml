@@ -1,10 +1,8 @@
 homebrew_taps:
   - caskroom/cask
-  - homebrew/php
   - caskroom/versions
 
 homebrew_packages:
-  - ansible
   - cocoapods
   - composer
   - coreutils
@@ -23,7 +21,5 @@ homebrew_packages:
   - ruby
   - rbenv
   - vim
-#  brew link node is needed
-#  - yarn
   - zsh
   - zsh-completions
