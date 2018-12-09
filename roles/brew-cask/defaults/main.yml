@@ -1,6 +1,5 @@
 homebrew_cask_packages:
   - android-studio
-  - android-studio-canary
   - appcleaner
   - atom
   - clipy
@@ -8,7 +7,6 @@ homebrew_cask_packages:
   - google-chrome
   - google-japanese-ime
   - iterm2
-  - java
   - jetbrains-toolbox
   - magican
   - sequel-pro

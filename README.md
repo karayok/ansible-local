@@ -22,6 +22,14 @@ Install Xcode if it's not installed.
 $ sudo xcodebuild -license
 ```
 
+Install Java.
+
+It may cause some problems during installing some brew packages, if it's not installed.
+
+```
+$ brew cask install java
+```
+
 ### Instal Ansible for Linux ( CentOS )
 
 ```
