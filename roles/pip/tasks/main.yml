@@ -1,5 +1,14 @@
+- name: upgrade pip
+  pip:
+    name: pip
+    executable: pip3
+    state: latest
+  tags:
+    - pip
+
 - name: Install python packages globally
   pip:
+    executable: pip3
     name: "{{ item }}"
     state: present
   with_items:
