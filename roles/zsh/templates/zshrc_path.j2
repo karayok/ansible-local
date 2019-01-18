@@ -1,1 +1,3 @@
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
+{# @see : https://github.com/golang/go/wiki/SettingGOPATH #}
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:$HOME/Library/Android/sdk/platform-tools
