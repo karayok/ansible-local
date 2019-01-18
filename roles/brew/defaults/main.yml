@@ -1,13 +1,10 @@
-homebrew_taps:
-  - caskroom/cask
-  - caskroom/versions
-
 homebrew_packages:
   - cocoapods
   - composer
   - coreutils
   - composer
   - git
+  - go
   - gradle
   - highlight
   - ideviceinstaller
@@ -15,7 +12,7 @@ homebrew_packages:
   - nkf
   - node
   - npm
-  - php70
+  - php
   - phpunit
   - python3
   - ruby
