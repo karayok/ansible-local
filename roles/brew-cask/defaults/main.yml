@@ -1,5 +1,4 @@
 homebrew_cask_packages:
-  - android-studio
   - appcleaner
   - atom
   - clipy
