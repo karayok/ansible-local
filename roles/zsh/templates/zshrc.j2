@@ -75,6 +75,10 @@ setopt globdots
 # 補完候補を ←↓↑→ でも選択出来るようにする
 zstyle ':completion:*:default' menu select=1
 
+# ---------- その他 ---------
+
+eval "$(nodenv init -)"
+
 # load .zshrc_*
 [ -f $ZDOTDIR/.zshrc_theme ] && . $ZDOTDIR/.zshrc_theme
 [ -f $ZDOTDIR/.zshrc_alias ] && . $ZDOTDIR/.zshrc_alias
