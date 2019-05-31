@@ -28,17 +28,19 @@
   tags:
     - brew
 
-- name: Update homebrew
+- name: Update homebrew & upgrade all packages
   homebrew:
     update_homebrew: yes
+    upgrade_all: yes
   tags:
     - brew
 
 - name: Install homebrew packages
   homebrew:
     name: "{{ homebrew_packages }}"
-    install_options: omit
     state: latest
+  environment:
+      - HOMEBREW_NO_INSTALL_CLEANUP: 1
   when:
     - homebrew_packages is defined
   tags:
@@ -47,8 +49,9 @@
 - name: Install additional homebrew packages
   homebrew:
     name: "{{ additional_homebrew_packages }}"
-    install_options: omit
     state: latest
+  environment:
+      - HOMEBREW_NO_INSTALL_CLEANUP: 1
   when:
     - additional_homebrew_packages is defined
   tags:

@@ -10,8 +10,7 @@ homebrew_packages:
   - ideviceinstaller
   - ios-deploy
   - nkf
-  - node
-  - npm
+  - nodenv
   - php
   - phpunit
   - python3
