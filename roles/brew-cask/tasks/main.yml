@@ -2,6 +2,7 @@
   homebrew_cask:
     name: "{{ homebrew_cask_packages }}"
     state: present
+    upgrade_all: yes
   tags:
     - brew-cask
   ignore_errors: yes
@@ -10,6 +11,7 @@
   homebrew_cask:
     name: "{{ additional_homebrew_cask_packages }}"
     state: present
+    upgrade_all: yes
   when:
     - additional_homebrew_cask_packages is defined
   tags:
