@@ -13,7 +13,6 @@ additional_homebrew_packages:
 additional_homebrew_cask_packages:
   - jd-gui
   - google-backup-and-sync
-  - vagrant
 
 ssh_config_values:
   - host: "github.com"

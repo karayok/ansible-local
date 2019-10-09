@@ -1,5 +1,6 @@
 alias la='ls -la'
 alias ls='ls -l'
+
 # @see : https://qiita.com/yone098@github/items/bba8a42de6b06e40983b
 alias lat='pwd;find . | sort | sed '\''1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'\'''
 
@@ -15,6 +16,7 @@ alias glog='git log --graph --date=short --decorate=short --pretty=format:'\''%C
 
 alias gb='git branch'
 alias gbd='git branch -d'
+
 # Delete all merged branches
 alias gdelb="git fetch --prune; git gc --prune=now; git branch --merged | egrep -v '\*|master|develop' | xargs git branch -d;"
 
@@ -36,3 +38,6 @@ alias gconf='git config -l'
 # ---------- npm ----------
 alias npm-remove='npm ls -gp --depth=0 | awk -F/ \''/node_modules/ && !/\/npm$/ {print $NF}\'' | xargs npm -g rm'
 alias sudo-npm-remove='sudo npm ls -gp --depth=0 | awk -F/ \''/node_modules/ && !/\/npm$/ {print $NF}\'' | sudo xargs npm -g rm'
+
+# ---------- docker ----------
+alias ddel='docker system prune'
