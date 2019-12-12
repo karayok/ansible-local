@@ -9,7 +9,7 @@ homebrew_packages:
   - highlight
   - ideviceinstaller
   - ios-deploy
-  - nkf
+#  - nkf
   - nodenv
   - php
   - phpunit

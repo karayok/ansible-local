@@ -40,8 +40,6 @@
     name: "{{ homebrew_packages }}"
     state: latest
     upgrade_all: yes
-  environment:
-      - HOMEBREW_NO_INSTALL_CLEANUP: 1
   when:
     - homebrew_packages is defined
   tags:

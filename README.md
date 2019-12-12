@@ -5,6 +5,14 @@ Ansible Playbook to setup local macOS / Linux.
 
 Some roles are work in progress.
 
+Versions
+---
+
+| Library / Tool | Version |
+| --- | --- |
+| Ansible | 2.9.2 |
+| Homebrew | 2.2.1 |
+
 Getting started
 ---
 
