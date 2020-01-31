@@ -25,7 +25,7 @@
     - zsh
     - git
     - vim
-    - atom
+    # - atom
     - pip
 - name: Setup company linux server environment
   hosts: biz-linux

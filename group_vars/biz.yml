@@ -10,8 +10,10 @@ additional_homebrew_packages:
   - swiftlint
 
 additional_homebrew_cask_packages:
-  - fastlane
+  # - fastlane
   - mysqlworkbench
+  - sourcetree
+  - vagrant
 
 ssh_config_values:
   - host: "github.com"

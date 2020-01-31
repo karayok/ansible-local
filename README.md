@@ -10,8 +10,8 @@ Versions
 
 | Library / Tool | Version |
 | --- | --- |
-| Ansible | 2.9.2 |
-| Homebrew | 2.2.1 |
+| Ansible | 2.9.3 |
+| Homebrew | 2.2.4 |
 
 Getting started
 ---
