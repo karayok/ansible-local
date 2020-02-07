@@ -10,3 +10,5 @@ homebrew_cask_packages:
   - sequel-pro
   - skitch
   - slack
+  - sourcetree
+  - xmind

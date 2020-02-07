@@ -55,7 +55,7 @@ $ sudo apt install ansible
 ### Clone repository
 
 ```
-$ git clone git@github.com:KarageAgeta/ansible-local.git
+$ git clone https://github.com/karayok/ansible-local.git
 ```
 
 Set your user.email / user.name for global git config.

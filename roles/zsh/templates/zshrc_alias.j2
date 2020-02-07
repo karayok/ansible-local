@@ -41,3 +41,5 @@ alias sudo-npm-remove='sudo npm ls -gp --depth=0 | awk -F/ \''/node_modules/ && 
 
 # ---------- docker ----------
 alias ddel='docker system prune'
+alias drm='docker ps -aq | xargs docker rm'
+alias drmi='docker images -aq | xargs docker rmi'
