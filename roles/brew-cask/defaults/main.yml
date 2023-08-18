@@ -1,14 +1,11 @@
 homebrew_cask_packages:
   - appcleaner
-  - atom
   - clipy
   - google-chrome
-  - google-japanese-ime
+    #  - google-japanese-ime
   - iterm2
   - jetbrains-toolbox
   - karabiner-elements
-  - sequel-pro
   - skitch
   - slack
-  - sourcetree
   - xmind

@@ -1,15 +1,10 @@
 homebrew_packages:
-  - cocoapods
   - composer
   - coreutils
   - composer
-  - docker
   - git
   - go
-  - gradle
   - highlight
-  - ideviceinstaller
-  - ios-deploy
 #  - nkf
   - nodenv
   - php

@@ -6,14 +6,9 @@ git_email: "mymail@mail.com"
 git_name: "My Name"
 
 additional_homebrew_packages:
-  - mergepbx
-  - swiftlint
+  - docker
 
 additional_homebrew_cask_packages:
-  # - fastlane
-  - mysqlworkbench
-  - sourcetree
-  - vagrant
 
 ssh_config_values:
   - host: "github.com"

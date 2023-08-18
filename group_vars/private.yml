@@ -6,13 +6,8 @@ git_email: "mymail@mail.com"
 git_name: "My Name"
 
 additional_homebrew_packages:
-  - mysql
-  - git-lfs
-  - dex2jar
 
 additional_homebrew_cask_packages:
-  - jd-gui
-  - google-backup-and-sync
 
 ssh_config_values:
   - host: "github.com"
